@@ -1,13 +1,13 @@
-table = '<table border="1"><tr><th>Имя</th><th>Фамилия</th><th>Вид спорта</th><th>Результат</th></tr><tr>'
+// table = '<table border="1"><tr><th>Имя</th><th>Фамилия</th><th>Вид спорта</th><th>Результат</th></tr>'
 document.getElementById('addButton').onclick = function() {
     let arrValue = Array.from(document.getElementsByTagName('input'), el => el.value)
     // document.getElementsByTagName('input').value = ' ' //!не работает отчистка полей
     console.log(arrValue)
     for(let i = 0; i < arrValue.length; i++) {
-        table += '<td>' + arrValue[i] + '</td>' 
+        tableLine = '<tr><td>' + arrValue[i] + '</td></tr></table>' 
     }
-    table += '</tr></table>'
-    document.getElementById('table').innerHTML = table
+    console.log(tableLine)
+    document.getElementById('table').append(tableLine)
 }
 
 // var d = document
