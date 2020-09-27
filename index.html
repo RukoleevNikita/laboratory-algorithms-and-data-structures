@@ -9,12 +9,12 @@
 <body>
     <div id="item">
         <div class="items">
-            <label>Имя:</label>
-            <input type="text" id="name">
-        </div>
-        <div class="items">
             <label>Фамилия:</label>
             <input type="text" id="surname">
+        </div>
+        <div class="items">
+            <label>Имя:</label>
+            <input type="text" id="name">
         </div>
         <div class="items">
             <label>Вид спорта: </label>
@@ -22,25 +22,24 @@
         </div>
         <div class="items">
             <label>Результат:</label>
-            <input type="text" id="resilt">
+            <input type="text" id="result">
         </div>
         <div class="submit" id="addButton">Добавить в табицу</div>
     </div>
-    <div id="table"></div>
-<table id="tab1" class="sortable">
-        <thead>
-            <tr>
-                <th>Фамилия</th>
-                <th>Имя</th>
-                <th>Вид спорта</th>
-                <th>Результат</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <!-- <div id="table"></div> -->
+    
+<table id="table" class="sortable">
+    <thead>
+        <tr>
+            <th>Фамилия</th>
+            <th>Имя</th>
+            <th>Вид спорта</th>
+            <th>Результат</th>
+        </tr>
+    </thead>
+</table>
 
-       <!--  <form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
+        <!-- <form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
         <fieldset>
         <legend>Добавить участника</legend>
             <ul>
@@ -67,7 +66,7 @@
             </ul>
         </fieldset>
         </form> -->
-
+    <script src="jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

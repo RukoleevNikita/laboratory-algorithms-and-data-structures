@@ -29,3 +29,6 @@ label {
 .submit:hover {
     background: orange;
 }
+.sortable td{
+    border: 1px solid springgreen;
+}
