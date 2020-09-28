@@ -1,8 +1,7 @@
  $(document).ready(function(){
      var arrValue = []
+     var arrSortSport = []
     $('#addButton').on('click', function() {
-        // let arrValue = Array.from(document.getElementsByTagName('input'), el => el.value)
-        // console.log(arrValue)
 
         let surnname = $('#surname').val()
         let name     = $('#name').val()
@@ -16,50 +15,34 @@
         arrTemp['sport'] = sport
         arrTemp['result'] = result
 
-        arrValue.push(arrTemp)
-        console.log(arrValue)
+        arrValue[arrValue.length] = arrTemp
 
         let tableLine = '<tr><td>' + surnname + '</td><td>' + name + '</td><td>' + sport + '</td><td>' + result + '</td></tr>'
         // document.getElementsByTagName('input').value = ' ' //!не работает отчистка полей
-        let table = $('#table')
+        var table = $('#table')
         table.append(tableLine)
     })
+    $('#sortSport').on('click', function() {
+        // document.querySelector('#resultSortTab').innerHTML = `<table class="tablSortSport"><thead><tr><th>Фамилия</th><th>Имя</th><th>Вид спорта</th><th>Результат</th></tr></thead></table>`
+        for(var i = 1; i < arrValue.length; i++){
+            for(var j = 0; j < arrValue.length-i; j++){
+                if(arrValue[j]['sport'].substring(0, 1) > arrValue[j + 1]['sport'].substring(0, 1)){
+                    var temp = arrValue[j]
+                    arrValue[j] = arrValue[j + 1]
+                    arrValue[j + 1] = temp
+                    arrSortSport = arrValue
+                }
+            }  
+        } 
+        for(var k = 0; k < arrSortSport.length; k++) {
+            for(var t = 0; t < arrSortSport[k].length; t++) {
+                var lineTable = '<tr><td>' + arrSortSport[k]['surname'] + '</td><td>' + arrSortSport[k]['name'] + '</td><td>' + arrSortSport[k]['sport'] + '</td><td>' + arrSortSport[k]['result'] + '</td></tr>'
+                var tab = $('#tableSort')
+                tab.append(lineTable)
+            }console.log(arrSortSport[k])
+            
+        }
+    }) 
+    
 })
-// window.onload = function(){
-//     function multi() {
-//         // Считываем значения с формы
-//         surnname = document.getElementById('surnname').value
-//         name = document.getElementById('name').value
-//         sport = document.getElementById('sport').value
-//         result = document.getElementById('result').value
-    
-//         // Находим нужную таблицу
-//         var tbody = document.getElementById('tab1').getElementsByTagName('TBODY')[0]
-    
-//         // Создаем строку таблицы и добавляем ее
-//         var row = document.createElement("TR")
-//         tbody.appendChild(row)
-    
-//         // Создаем ячейки в вышесозданной строке
-//         // и добавляем тх
-//         var td1 = document.createElement("TD")
-//         var td2 = document.createElement("TD")
-//         var td3 = document.createElement("TD")
-//         var td4 = document.createElement("TD")
-    
-//         row.appendChild(td1)
-//         row.appendChild(td2)
-//         row.appendChild(td3)
-//         row.appendChild(td4)
-    
-//         // Наполняем ячейки
-//         td1.innerHTML = surnname
-//         td2.innerHTML = name
-//         td3.innerHTML = sport
-//         td4.innerHTML = result
-//     }
-   
-// }
-
-
 
