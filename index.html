@@ -7,79 +7,54 @@
     <title>Описать структуру</title>
 </head>
 <body>
-    <div id="item">
-        <div class="items">
-            <label>Фамилия:</label>
-            <input type="text" id="surname">
-        </div>
-        <div class="items">
-            <label>Имя:</label>
-            <input type="text" id="name">
-        </div>
-        <div class="items">
-            <label>Вид спорта: </label>
-            <input type="text" id="sport">
-        </div>
-        <div class="items">
-            <label>Результат:</label>
-            <input type="text" id="result">
+    <div class="item">
+        <div class="form">
+            <div class="items">
+                <label>Фамилия:</label>
+                <input type="text" id="surname">
+            </div>
+            <div class="items">
+                <label>Имя:</label>
+                <input type="text" id="name">
+            </div>
+            <div class="items">
+                <label>Вид спорта: </label>
+                <input type="text" id="sport">
+            </div>
+            <div class="items">
+                <label>Результат:</label>
+                <input type="text" id="result">
+            </div>
         </div>
         <div class="submit" id="addButton">Добавить в табицу</div>
-    </div>
-    <!-- <div id="table"></div> -->
     
-<table id="table" class="sortable">
-    <thead>
-        <tr>
-            <th>Фамилия</th>
-            <th>Имя</th>
-            <th>Вид спорта</th>
-            <th>Результат</th>
-        </tr>
-    </thead>
-</table>
+        <table id="table" class="sortable">
+            <thead>
+                <tr>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+                    <th>Вид спорта</th>
+                    <th>Результат</th>
+                </tr>
+            </thead>
+        </table>
+    </div>
 
-<table class="tableSortSport sortable" id="tableSort">
-    <thead>
-        <tr>
-            <th>Фамилия</th>
-            <th>Имя</th>
-            <th>Вид спорта</th>
-            <th>Результат</th>
-        </tr>
-    </thead>
-</table>
+    <div class="sortSportBox">
+        <table class="tableSortSport sortable" id="tableSort">
+            <thead>
+                <tr>
+                    <th>Фамилия</th>
+                    <th>Имя</th>
+                    <th>Вид спорта</th>
+                    <th>Результат</th>
+                </tr>
+            </thead>
+        </table>
 
-<!-- <div id="resultSortTab"></div>   -->
-<div class="submit" id="sortSport">По видам спорта</div>
+        <div class="submit" id="sortSport">По видам спорта</div>
+    </div>
 
-        <!-- <form action="" id="add_persons" method="post" onsubmit="addRow();return false;">
-        <fieldset>
-        <legend>Добавить участника</legend>
-            <ul>
-                <li>
-                    <label for="name">Фамилия</label>
-                    <input type="text" name="surnname" id="surnname" value="" size="12" tabindex="1" />
-                </li>
-                <li>
-                    <label for="initials">Имя</label>
-                    <input type="text" name="name" id="name" value="" size="12" tabindex="2" />
-                </li>
-                <li>
-                    <label for="posada">Вид спорта</label>
-                    <input type="text" name="sport" id="sport" value="" size="12" tabindex="3" />
-                </li>
-                <li>
-                    <label for="posada">Результат</label>
-                    <input type="text" name="result" id="result" value="" size="12" tabindex="4" />
-                </li>
-                <li>
-                    <label for="subm"></label>
-                    <input type="submit" name="subm" class="submit" value="Добавить" tabindex="5" />
-                </li>
-            </ul>
-        </fieldset>
-        </form> -->
     <script src="jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
 </body>
