@@ -23,12 +23,12 @@
             </div>
             <div class="items">
                 <label>Результат:</label>
-                <input type="text" id="result">
+                <input type="number" id="result">
             </div>
         </div>
         <div class="submit" id="addButton">Добавить в табицу</div>
     
-        <table id="table" class="sortable">
+        <table id="table">
             <thead>
                 <tr>
                     <th>Фамилия</th>
@@ -40,8 +40,8 @@
         </table>
     </div>
 
-    <div class="sortSportBox">
-        <table class="tableSortSport sortable" id="tableSort">
+    <div class="item">
+        <table id="tableSort">
             <thead>
                 <tr>
                     <th>Фамилия</th>
@@ -52,8 +52,20 @@
             </thead>
         </table>
 
-        <div class="submit" id="sortSport">По видам спорта</div>
+        <div class="submit" id="sortSport">Сортировка по видам спорта</div>
     </div>
+    <div class="item">
+        <table id="failsTable">
+            <thead>
+                <tr>
+                    <th>Фамилия</th>
+                    <th>Результат</th>
+                </tr>
+            </thead>
+        </table>
+        <div class="submit" id="failsResult">Худший результат</div>
+    </div>
+   
 
     <script src="jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
