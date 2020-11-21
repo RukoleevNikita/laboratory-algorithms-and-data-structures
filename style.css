@@ -84,3 +84,25 @@ label {
     0 0 8px rgba(82, 168, 236, 0.6);
   outline: 0 none;
 }
+
+
+/* ===================================================== */
+/* .block {
+  padding: 10px;
+}
+#but {
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid orchid;
+  border-radius: 8px;
+  width: 100px;
+  text-align: center;
+  margin-top: 10px;
+}
+#but:hover {
+  background: silver;
+}
+#result {
+  width: 100%;
+  padding: 10px;
+} */

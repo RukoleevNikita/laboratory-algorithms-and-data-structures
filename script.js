@@ -68,3 +68,43 @@ $(document).ready(function () {
     })
 })
 
+
+// Выбираем первый символ строки
+// Если это открывающая скобка - помещаем ее в стек
+// Если это закрывающая скобка, извлекаем последнее значение из стека и проверяем скобки на соответствие. Если стек пуст или закрывающая скобка не соответствует открывающей - прерываем выполнение и возвращаем false
+// Переходим к следующему символу строки и повторяем действия с п.2
+// Если по окончании выполнения алгоритма стек не пуст (это возможно, если открывающих скобок больше, чем закрывающих) - возвращаем false.
+// $(document).ready(function () {
+//     $('#but').on('click', function () {
+//         let stack = []
+//         let open = ['(', '[', '{']
+//         let close = [')', ']', '}']
+//         let openIndex
+//         let closeIndex
+//         let inputValues = $('#brackets').val()
+//         let arrValues = inputValues.split('')
+//         $('#brackets').val('')
+//         for (var index = 0; index < arrValues.length; index++) {
+//             openIndex = open.indexOf(arrValues[index])
+//             if (openIndex !== -1) {
+//                 stack.push(openIndex)
+//                 continue;
+//             }
+//             closeIndex = close.indexOf(arrValues[index])
+//             if (closeIndex !== -1) {
+//                 openIndex = stack.pop()
+//                 if (openIndex !== closeIndex) {
+//                     return $('#result').text(`Последовательность ${inputValues} не верная!`),
+//                         setTimeout(() => $('#result').text(''), 3000)
+//                 }
+//             }
+//         }
+//         if (stack.length !== 0) {
+//             return $('#result').text(`Последовательность ${inputValues} не верная!`),
+//                 setTimeout(() => $('#result').text(''), 3000)
+//         }
+//         return $('#result').text(`Последовательность ${inputValues} верная!`),
+//             setTimeout(() => $('#result').text(''), 3000)
+//     })
+// })
+
